@@ -1,9 +1,16 @@
-var a;
-var circles=[];
+const Engine = Matter.Engine;
+const World= Matter.World;
+const Bodies = Matter.Bodies;
+const Constraint = Matter.Constraint;
+
+//var a;
+//var circles=[];
 
 function setup() {
   createCanvas(800,800);
-
+  engine = Engine.create();
+  world = engine.world;
+  
   ground = new Ground(400, height, 800, 20);
 
   // camera=new Camera(width/2,height/2,0.5);
